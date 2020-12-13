@@ -7,10 +7,10 @@ const AddTechModal = () => {
 	const [lastName, setLastName] = useState('');
 
 	const onSubmit = () => {
-		if (firstname === '' || lastname === '') {
+		if (firstName === '' || lastName === '') {
 			M.toast({ html: 'Please enter a first and last name' });
 		} else {
-			console.log(firstname, lastname);
+			console.log(firstName, lastName);
 			setFirstName('');
 			setLastName('');
 		}
