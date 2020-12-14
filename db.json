@@ -1,18 +1,25 @@
 {
   "logs": [
     {
+      "id": 1,
       "message": "Changed network card in service station 007",
-      "attention": false,
       "tech": "John Doe",
-      "date": "2020-12-14T00:23:40.979Z",
-      "id": 1
+      "attention": false,
+      "date": "2020-12-14T06:10:29.479Z"
     },
     {
-      "message": "1122 wireless network done",
+      "message": "test",
       "attention": true,
-      "tech": "Sam Smith",
-      "date": "2020-12-14T00:27:37.028Z",
+      "tech": "Sarah Wilson",
+      "date": "2020-12-14T05:52:14.254Z",
       "id": 2
+    },
+    {
+      "message": "test #2",
+      "attention": true,
+      "tech": "John Doe",
+      "date": "2020-12-14T05:52:31.185Z",
+      "id": 3
     }
   ],
   "techs": [
