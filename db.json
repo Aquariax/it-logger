@@ -3,9 +3,9 @@
     {
       "id": 1,
       "message": "Changed network card in service station 007",
-      "tech": "Jamicheal Eatmon",
+      "tech": "John Doe",
       "attention": false,
-      "date": "2020-12-14T10:16:32.350Z"
+      "date": "2020-12-14T10:32:09.469Z"
     },
     {
       "message": "test",
@@ -37,11 +37,6 @@
       "id": 3,
       "firstName": "Sarah",
       "lastName": "Wilson"
-    },
-    {
-      "firstName": "Jamicheal",
-      "lastName": "Eatmon",
-      "id": 4
     }
   ]
 }

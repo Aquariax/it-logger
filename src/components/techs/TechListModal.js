@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import TechItem from './TechItem';
 import { connect } from 'react-redux';
 import { getTechs } from '../../actions/techActions';
@@ -8,15 +8,6 @@ const TechListModal = ({ getTechs, tech: { techs, loading } }) => {
 		getTechs();
 		//eslint-disable-next-line
 	}, []);
-
-	// const getTechs = async () => {
-	// 	setLoading(true);
-	// 	const res = await fetch('/techs');
-	// 	const data = await res.json();
-
-	// 	setTechs(data);
-	// 	setLoading(false);
-	// };
 
 	return (
 		<div id='tech-list-modal' className='modal'>
