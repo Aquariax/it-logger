@@ -20,7 +20,7 @@ export const getTechs = () => async (dispatch) => {
 	} catch (err) {
 		dispatch({
 			type: TECHS_ERROR,
-			payload: err.respnse.statusText,
+			payload: err.message,
 		});
 	}
 };
@@ -46,7 +46,7 @@ export const addTech = (tech) => async (dispatch) => {
 	} catch (err) {
 		dispatch({
 			type: TECHS_ERROR,
-			payload: err.respnse.statusText,
+			payload: err.response.statusText,
 		});
 	}
 };
@@ -66,7 +66,7 @@ export const deleteTech = (id) => async (dispatch) => {
 	} catch (err) {
 		dispatch({
 			type: TECHS_ERROR,
-			payload: err.respnse.statusText,
+			payload: err.response.statusText,
 		});
 	}
 };
