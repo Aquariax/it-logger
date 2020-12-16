@@ -14,7 +14,7 @@ export const getLogs = () => async (dispatch) => {
 	try {
 		setLoading();
 
-		const res = await fetch('/logs');
+		const res = await fetch('/api/logs');
 		const data = await res.json();
 
 		dispatch({
@@ -24,7 +24,7 @@ export const getLogs = () => async (dispatch) => {
 	} catch (err) {
 		dispatch({
 			type: LOGS_ERROR,
-			payload: err.response.statusText,
+			payload: err.message,
 		});
 	}
 };
@@ -33,7 +33,7 @@ export const searchLogs = (text) => async (dispatch) => {
 	try {
 		setLoading();
 
-		const res = await fetch(`/logs?q=${text}`);
+		const res = await fetch(`/api/logs?q=${text}`);
 		const data = await res.json();
 
 		dispatch({
@@ -43,7 +43,7 @@ export const searchLogs = (text) => async (dispatch) => {
 	} catch (err) {
 		dispatch({
 			type: LOGS_ERROR,
-			payload: err.response.statusText,
+			payload: err.message,
 		});
 	}
 };
@@ -52,7 +52,7 @@ export const addLogs = (log) => async (dispatch) => {
 	try {
 		setLoading();
 
-		const res = await fetch('/logs', {
+		const res = await fetch('/api/logs', {
 			method: 'POST',
 			body: JSON.stringify(log),
 			headers: {
@@ -68,7 +68,7 @@ export const addLogs = (log) => async (dispatch) => {
 	} catch (err) {
 		dispatch({
 			type: LOGS_ERROR,
-			payload: err.response.statusText,
+			payload: err.message,
 		});
 	}
 };
@@ -77,7 +77,7 @@ export const deleteLog = (id) => async (dispatch) => {
 	try {
 		setLoading();
 
-		await fetch(`/logs/${id}`, {
+		await fetch(`/api/logs/${id}`, {
 			method: 'DELETE',
 		});
 
@@ -88,7 +88,7 @@ export const deleteLog = (id) => async (dispatch) => {
 	} catch (err) {
 		dispatch({
 			type: LOGS_ERROR,
-			payload: err.response.statusText,
+			payload: err.message,
 		});
 	}
 };
@@ -97,7 +97,7 @@ export const updateLog = (log) => async (dispatch) => {
 	try {
 		setLoading();
 
-		const res = await fetch(`/logs/${log.id}`, {
+		const res = await fetch(`/api/logs/${log.id}`, {
 			method: 'PUT',
 			body: JSON.stringify(log),
 			headers: {
@@ -113,7 +113,7 @@ export const updateLog = (log) => async (dispatch) => {
 	} catch (err) {
 		dispatch({
 			type: LOGS_ERROR,
-			payload: err.response.statusText,
+			payload: err.message,
 		});
 	}
 };
